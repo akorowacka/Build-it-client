@@ -1,0 +1,28 @@
+{
+  "name": "build-it",
+  "version": "1.0.0",
+  "description": "Database project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss assets/scss/main.scss assets/css/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "build-js": "uglifyjs app/components/**/*.js  -o app/app.dist.js",
+    "watch-js": "nodemon -e js -x \"npm run build-js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patrykdom15/Build-it.git"
+  },
+  "author": "Patryk Domałeczny",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patrykdom15/Build-it/issues"
+  },
+  "homepage": "https://github.com/patrykdom15/Build-it#readme",
+  "devDependencies": {
+    "node-sass": "^3.4.2",
+    "nodemon": "^1.9.1",
+    "uglify-js": "^2.6.2"
+  }
+}

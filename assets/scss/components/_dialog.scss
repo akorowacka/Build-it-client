@@ -1,0 +1,60 @@
+.dialog__close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 32px;
+}
+
+.dialog--login {
+    min-width: 400px;
+}
+
+.dialog__top {
+    height: 15vh;
+
+    i {
+        font-size: 38px;
+        right: 9px;
+        position: relative;
+        line-height: 32px;
+    }
+}
+
+.dialog__top__logo {
+    height: 20vh;
+    display: block;
+    margin: 0 auto;
+}
+
+.dialog__bottom {
+    position: relative;
+    top: -20px;
+}
+
+.dialog--login__btn {
+    border: 3px solid transparent;
+    color: $color-white;
+    font-size: 18px;
+    margin: 0 auto 30px !important;
+    display: block;
+    padding: 5px 30px;
+
+    &.md-focused,
+    &:hover {
+        color: $color-black;
+        border-color: $color-black;
+
+    }
+}
+
+md-dialog-content {
+    .error {
+        color: red;
+        display: block;
+        margin: 0 auto;
+    }
+
+    md-input-container {
+        margin: 12px 0;
+    }
+}

@@ -1,0 +1,27 @@
+<div ng-controller="loginCtrl">
+    <md-button class="login__btn" ng-click="showLogin($event)" ng-hide="isLogged">LOGIN</md-button>
+    <md-fab-speed-dial md-open="false" class="menu md-fling login__menu" ng-show="isLogged">
+        <md-fab-trigger>
+            <md-button aria-label="menu" class="md-fab" ng-if="user.avatar_url">
+                <img ng-src="user.avatar_url" class="md-avatar" />
+            </md-button>
+            <md-button aria-label="menu" class="md-fab login_default-avatar" ng-if="!user.avatar_url">
+                <div class="login_default-avatar__letter">{{userDefaultAvatar}}</div>
+            </md-button>
+        </md-fab-trigger>
+        <md-fab-actions>
+          <md-button aria-label="Logout" class="md-fab md-raised md-mini login__sub-menu__item">
+            <i class="material-icons">account_circle</i>
+            <md-tooltip md-direction="left">
+               My Account
+            </md-tooltip>
+          </md-button>
+          <md-button aria-label="Logout" class="md-fab md-raised md-mini login__sub-menu__item" ng-click="logOut()">
+            <i class="material-icons">directions_walk</i>
+            <md-tooltip md-direction="left">
+              Logout
+            </md-tooltip>
+          </md-button>
+        </md-fab-actions>
+    </md-fab-speed-dial>
+</div>

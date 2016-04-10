@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" ng-app="BuildIt">
+<head>
+    <meta charset="utf-8">
+    <title>Build It</title>
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-cookies.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+    <!-- Angular UI ROUTER library -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.9.0/lodash.min.js"></script>
+    <script>
+        // LODASH MAPPING FIX
+        _.contains = _.includes;
+    </script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/restangular/1.3.1/restangular.js"></script>
+
+</head>
+<body ng-cloak>
+    <md-toolbar id="header" class="header-wrapper">
+      <div layout="row" class="md-toolbar-tools header">
+                <span flex="15"></span>
+                <div flex="35">
+                    <img src="assets/img/logo.svg" class="header__logo"/>
+                </div>
+                <div flex>
+                    <login></login>
+                </div>
+                <span flex="15"></span>
+        </div>
+      </div>
+    </md-toolbar>
+
+    <div ui-view></div>
+
+
+    <script src="app/app.module.js"></script>
+    <script src="app/app.routes.js"></script>
+    <script src="app/app.dist.js"></script>
+
+</body>
+</html>

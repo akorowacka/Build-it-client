@@ -1,0 +1,227 @@
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  color: #000;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga'; }
+
+.container {
+  max-width: 1200px; }
+
+body {
+  background: #ffeb3b; }
+
+.layout-row {
+  width: 100%; }
+
+.md-button {
+  background: #000; }
+  .md-button:hover {
+    color: #000; }
+
+.md-icon-button {
+  background: transparent; }
+
+md-dialog {
+  background: #ffeb3b; }
+
+.md-dialog-content {
+  max-width: 65%;
+  margin: 0 auto; }
+
+.md-input-focused {
+  color: #000; }
+  .md-input-focused label {
+    color: #000; }
+
+md-input-container:not(.md-input-invalid).md-input-focused {
+  color: #000; }
+  md-input-container:not(.md-input-invalid).md-input-focused label {
+    color: #000; }
+  md-input-container:not(.md-input-invalid).md-input-focused .md-input {
+    border-color: #000; }
+
+md-fab-actions {
+  opacity: 0;
+  visibility: hidden; }
+  .md-is-open md-fab-actions {
+    opacity: 1;
+    visibility: visible; }
+
+md-fab-speed-dial.menu {
+  position: absolute;
+  top: 12px; }
+
+md-tabs md-ink-bar {
+  color: #000;
+  background: #000; }
+
+md-tabs .md-tab.md-active {
+  color: #fff;
+  background: #000; }
+
+md-tabs .md-tab {
+  color: #000; }
+
+.text--center {
+  text-align: center; }
+
+.header-wrapper {
+  position: fixed; }
+
+.header {
+  background: #ffeb3b; }
+
+.header__logo {
+  height: 150px;
+  margin-top: -40px; }
+
+login {
+  float: right;
+  margin-right: 100px; }
+
+.login__btn {
+  position: absolute;
+  top: 15px; }
+  .login__btn.ng-hide {
+    transition: 0.1s linear all;
+    opacity: 0; }
+
+.login__menu.ng-hide {
+  transition: 0.1s linear all;
+  opacity: 0; }
+
+.login__error {
+  padding-top: 20px; }
+
+.md-fab.login_default-avatar {
+  float: right;
+  background-color: #000;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%; }
+  .md-fab.login_default-avatar:not([disabled]):hover {
+    background-color: #ffeb3b; }
+    .md-fab.login_default-avatar:not([disabled]):hover .login_default-avatar__letter {
+      color: #000; }
+
+.login_default-avatar__letter {
+  font-family: 'Roboto', sans-serif;
+  color: #ffeb3b;
+  line-height: 40px;
+  width: 100%;
+  text-align: center;
+  display: block;
+  font-weight: bold;
+  font-size: 26px;
+  -webkit-user-select: none; }
+
+.md-button.md-fab.md-mini.login__sub-menu__item {
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  min-height: 30px; }
+  .md-button.md-fab.md-mini.login__sub-menu__item i {
+    line-height: 30px;
+    width: 30px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 16px; }
+
+.dialog__close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 32px; }
+
+.dialog--login {
+  min-width: 400px; }
+
+.dialog__top {
+  height: 15vh; }
+  .dialog__top i {
+    font-size: 38px;
+    right: 9px;
+    position: relative;
+    line-height: 32px; }
+
+.dialog__top__logo {
+  height: 20vh;
+  display: block;
+  margin: 0 auto; }
+
+.dialog__bottom {
+  position: relative;
+  top: -20px; }
+
+.dialog--login__btn {
+  border: 3px solid transparent;
+  color: #fff;
+  font-size: 18px;
+  margin: 0 auto 30px !important;
+  display: block;
+  padding: 5px 30px; }
+  .dialog--login__btn.md-focused, .dialog--login__btn:hover {
+    color: #000;
+    border-color: #000; }
+
+md-dialog-content .error {
+  color: red;
+  display: block;
+  margin: 0 auto; }
+
+md-dialog-content md-input-container {
+  margin: 12px 0; }
+
+.video-banner {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative; }
+  .video-banner video {
+    position: absolute;
+    top: 0; }
+  .video-banner svg {
+    fill: #fff; }
+
+.video-banner__logo {
+  width: 35%;
+  top: 5vh;
+  position: relative;
+  margin: 0 auto;
+  display: block; }
+
+.video-banner__overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.35); }
+
+.video-banner__headline {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size: 62px;
+  font-family: 'Roboto';
+  font-weight: 300;
+  margin-top: -20vh; }

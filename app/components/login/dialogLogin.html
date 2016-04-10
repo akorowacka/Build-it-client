@@ -1,0 +1,118 @@
+<md-dialog class="dialog--login" aria-label="Login Dialog" ng-cloak>
+
+    <div class="dialog__top">
+        <img src="assets/img/logo.svg" class="dialog__top__logo"/>
+        <md-button class="md-icon-button dialog__close" ng-click="cancel()">
+             <i class="material-icons">close</i>
+        </md-button>
+    </div>
+    <md-tabs md-dynamic-height md-border-bottom md-center-tabs>
+        <md-tab label="LOGIN">
+            <form name="loginForm">
+                <md-dialog-content>
+                    <div role="alert">
+                        <span class="error text--center login__error" ng-show="isLoginIncorrect">Wrong credentials</span>
+                    </div>
+                    <div class="md-dialog-content">
+                        <md-input-container class="md-block">
+                          <label class="md-title">LOGIN</label>
+                          <input required type="email" name="login" ng-model="userlogin"
+                                 minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+                          <div ng-messages="userlogin.$error" role="alert">
+                            <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                              An invalid e-mail address.
+                            </div>
+                          </div>
+                        </md-input-container>
+                        <md-input-container class="md-block">
+                          <label class="md-title">PASSWORD</label>
+                          <input required type="password" name="password" ng-model="userpass"
+                                 minlength="1" />
+                          <div ng-messages="userpass.$error" role="alert">
+                            <div ng-message-exp="['required', 'minlength']">
+                              An invalid password.
+                            </div>
+                          </div>
+                        </md-input-container>
+                    </div>
+                </md-dialog-content>
+                <md-dialog-actions class="dialog__bottom" layout="row">
+                    <div flex>
+                        <md-button class="dialog--login__btn" ng-click="login()">
+                          Login
+                        </md-button>
+                    </div>
+                </md-dialog-actions>
+            </form>
+        </md-tab>
+        <md-tab label="REGISTER">
+            <form name="registerForm" ng-hide="userAddedSuccessfully">
+                <md-dialog-content>
+                    <div role="alert">
+                        <span class="error text--center login__error" ng-show="isAlreadyRegistered">User with current email exists!</span>
+                    </div>
+                    <div class="md-dialog-content">
+                        <md-input-container class="md-block">
+                          <label class="md-title">LOGIN/EMAIL</label>
+                          <input required type="email" name="login" ng-model="newUserLogin"
+                                 minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+                          <div ng-messages="userlogin.$error" role="alert">
+                            <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                              An invalid e-mail address.
+                            </div>
+                          </div>
+                        </md-input-container>
+                        <md-input-container class="md-block">
+                          <label class="md-title">NAME</label>
+                          <input required type="text" name="name" ng-model="newUserName"/>
+                          <div ng-messages="newUserName.$error" role="alert">
+                            <div ng-message-exp="['required']">
+                              This field is required
+                            </div>
+                          </div>
+                        </md-input-container>
+                        <md-input-container class="md-block">
+                          <label class="md-title">SURNAME</label>
+                          <input required type="text" name="name" ng-model="newUserSurname"/>
+                          <div ng-messages="newUserSurname.$error" role="alert">
+                            <div ng-message-exp="['required']">
+                              This field is required
+                            </div>
+                          </div>
+                        </md-input-container>
+                        <md-input-container class="md-block">
+                          <label class="md-title">ADDRESS</label>
+                          <input required type="text" name="name" ng-model="newUserAddress"/>
+                          <div ng-messages="newUserAddress.$error" role="alert">
+                            <div ng-message-exp="['required']">
+                              This field is required
+                            </div>
+                          </div>
+                        </md-input-container>
+                        <md-input-container class="md-block">
+                          <label class="md-title">PASSWORD</label>
+                          <input required type="password" name="password" ng-model="newUserPass"
+                                 minlength="1" />
+                          <div ng-messages="newUserPass.$error" role="alert">
+                            <div ng-message-exp="['required', 'minlength']">
+                              An invalid password.
+                            </div>
+                          </div>
+                        </md-input-container>
+                    </div>
+                </md-dialog-content>
+                <md-dialog-actions class="dialog__bottom" layout="row">
+                    <div flex>
+                        <md-button class="dialog--login__btn" ng-click="register()">
+                          Register
+                        </md-button>
+                    </div>
+                </md-dialog-actions>
+            </form>
+            <md-dialog-conent ng-show="userAddedSuccessfully">
+                <h2 class="md-headline text--center">User successfully created!</h2>
+                <h3 class="md-title text--center">You can now log in</h3>
+            </md-dialog-content>
+        </md-tab>
+    </md-tabs>
+</md-dialog>

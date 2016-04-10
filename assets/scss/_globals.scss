@@ -1,0 +1,87 @@
+.container {
+    max-width: 1200px;
+}
+
+body {
+    background: $color-main;
+}
+
+.layout-row {
+    width: 100%;
+}
+
+.md-button {
+    background: $color-black;
+
+    &:hover {
+        color: $color-black;
+    }
+}
+
+.md-icon-button {
+    background: transparent;
+}
+
+md-dialog {
+    background: $color-main;
+}
+
+.md-dialog-content {
+    max-width: 65%;
+    margin: 0 auto;
+}
+
+.md-input-focused {
+    color: $color-black;
+
+    label {
+        color: $color-black;
+    }
+}
+
+md-input-container:not(.md-input-invalid) {
+    &.md-input-focused {
+        color: $color-black;
+
+        label {
+            color: $color-black;
+        }
+
+        .md-input {
+            border-color: $color-black;
+        }
+    }
+}
+
+md-fab-actions {
+    opacity: 0;
+    visibility: hidden;
+
+    .md-is-open & {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+md-fab-speed-dial.menu {
+    position: absolute;
+    top: 12px;
+}
+
+md-tabs md-ink-bar {
+    color: $color-black;
+    background: $color-black;
+}
+
+md-tabs .md-tab.md-active {
+    color: $color-white;
+    background: $color-black;
+}
+
+md-tabs .md-tab {
+    color: $color-black;
+}
+
+.text--center {
+    text-align: center;
+}

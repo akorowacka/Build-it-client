@@ -1,0 +1,70 @@
+login {
+    float: right;
+    margin-right: 100px;
+}
+
+.login__btn {
+    position: absolute;
+    top: 15px;
+
+    &.ng-hide {
+        transition:0.1s linear all;
+        opacity:0;
+    }
+}
+
+.login__menu {
+    &.ng-hide {
+        transition:0.1s linear all;
+        opacity:0;
+    }
+}
+
+.login__error {
+    padding-top: 20px;
+}
+
+.md-fab.login_default-avatar {
+    float: right;
+    background-color: $color-black;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+
+    &:not([disabled]):hover {
+        background-color: $color-main;
+
+        .login_default-avatar__letter {
+            color: $color-black;
+        }
+    }
+}
+
+.login_default-avatar__letter {
+    font-family: 'Roboto', sans-serif;
+    color: $color-main;
+    line-height: 40px;
+    width: 100%;
+    text-align: center;
+    display: block;
+    font-weight: bold;
+    font-size: 26px;
+    -webkit-user-select: none;
+}
+
+.md-button.md-fab.md-mini.login__sub-menu__item {
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    min-height: 30px;
+
+    i {
+        line-height: 30px;
+        width: 30px;
+        text-align: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-size: 16px;
+    }
+}
