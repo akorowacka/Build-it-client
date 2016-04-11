@@ -40,3 +40,18 @@
     font-weight: 300;
     margin-top: -20vh;
 }
+
+.video-banner__btn {
+    display: block;
+    margin: 0 auto;
+    color: $color-black;
+    background: $color-main;
+    font-size: 32px;
+    padding: 15px 50px;
+    max-width: 400px;
+
+    &:not([disabled]):hover {
+        color: $color-white;
+        background: $color-black;
+    }
+}

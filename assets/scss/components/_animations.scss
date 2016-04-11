@@ -1,0 +1,54 @@
+
+// --------------------
+// Animation.scss
+// --------------------
+
+.main-view.ng-enter, .main-view.ng-leave{
+ -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
+  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
+   -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
+      transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
+ }
+
+.video-banner__text-box > * {
+    -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s;
+     -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s;
+      -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s;
+         transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s;
+}
+
+
+@for $i from 1 to 10 {
+    .animation-chain > *:nth-child(#{$i}) {
+        animation-delay: $i * 0.05s !important;
+        transition-delay: $i * 0.05s !important;
+    }
+}
+
+.main-view.ng-enter.ng-enter-active {
+     .video-banner__text-box > * {
+         position: relative;
+         transform: translateY(0vh);
+     }
+}
+
+.main-view.ng-enter {
+     .video-banner__text-box > * {
+        transform: translateY(-100vh);
+     }
+}
+
+.main-view.ng-leave.ng-leave-active {
+     opacity: 0;
+
+     .video-banner__text-box > * {
+        position: relative;
+        transform: translateY(-100vh);
+     }
+ }
+
+.main-view.ng-leave {
+     .video-banner__text-box > * {
+         transform: translateY(0vh);
+     }
+ }
